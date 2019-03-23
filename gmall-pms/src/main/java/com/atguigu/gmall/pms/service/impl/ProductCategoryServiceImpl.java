@@ -6,6 +6,8 @@ import com.atguigu.gmall.pms.service.ProductCategoryService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
+
 /**
  * <p>
  * 产品分类 服务实现类
@@ -16,5 +18,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class ProductCategoryServiceImpl extends ServiceImpl<ProductCategoryMapper, ProductCategory> implements ProductCategoryService {
+//分页查询商品分类
+    @Override
+    public Map<String, Object> PageproductCategory(Integer pageNum, Integer pageSize) {
+        ProductCategoryMapper baseMapper = getBaseMapper();
 
+        return null;
+    }
 }

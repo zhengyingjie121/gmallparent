@@ -18,13 +18,11 @@ public class GmallSwagger2Config {
     @Bean("后台用户模块")
     public Docket userApis() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("后台用户模块")
+        .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.withClassAnnotation(Api.class))
-                .paths(PathSelectors.regex("/admin.*"))
-                .build()
-                .apiInfo(apiInfo())
-                .enable(true);
+                .apis(RequestHandlerSelectors.basePackage("com.atguigu.gmall.admin"))
+                .paths(PathSelectors.any())
+                .build();
     }
 
     private ApiInfo apiInfo() {

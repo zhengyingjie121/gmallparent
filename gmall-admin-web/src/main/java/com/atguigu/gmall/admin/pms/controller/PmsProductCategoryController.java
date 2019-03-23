@@ -13,6 +13,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 商品分类模块Controller
@@ -48,7 +49,8 @@ public class PmsProductCategoryController {
                           @RequestParam(value = "pageSize", defaultValue = "5") Integer pageSize,
                           @RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum) {
         //TODO 分页查询商品分类
-        return new CommonResult().success(null);
+        Map<String,Object> productCategoryinfo = productCategoryService.PageproductCategory(pageNum,pageSize);
+        return new CommonResult().success(productCategoryinfo);
     }
 
     @ApiOperation("根据id获取商品分类")

@@ -33,12 +33,18 @@
         </dependency>
 
         <!--集成logstash-->
+        <!--<dependency>-->
+            <!--<groupId>net.logstash.logback</groupId>-->
+            <!--<artifactId>logstash-logback-encoder</artifactId>-->
+            <!--<version>4.8</version>-->
+        <!--</dependency>-->
+        <!--集成logstash-->
+        <!-- https://mvnrepository.com/artifact/net.logstash.logback/logstash-logback-encoder -->
         <dependency>
             <groupId>net.logstash.logback</groupId>
             <artifactId>logstash-logback-encoder</artifactId>
-            <version>4.8</version>
+            <version>5.3</version>
         </dependency>
-
     </dependencies>
 
 </project>
